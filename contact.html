@@ -1,0 +1,67 @@
+<!DOCTYPE html
+<head>
+    <title>Fitness 360 - Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Fitness 360</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="feedback-form">
+        <h2>Feedback</h2>
+        <form id="feedback-form">
+            <input type="text" placeholder="First Name" name="first-name" required>
+            <input type="text" placeholder="Last Name" name="last-name" required>
+            <input type="tel" placeholder="Phone Number (optional)" name="phone">
+            <input type="email" placeholder="Email" name="email" required>
+            <textarea placeholder="Feedback" name="feedback" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="thank-you-message" style="display: none; margin-top: 20px; color: green; font-weight: bold;">
+            Thank you for your feedback! We appreciate your time.
+        </div>
+    </section>
+
+
+    <section class="google-map">
+        <h2>Our Location</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="400" style="border: 0; border-radius: 12px;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+
+    <section class="footer-box">
+        <div class="footer-content">
+            <h2>Fitness 360</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/fitness360" target="_blank">
+                    <img src="facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/fitness360" target="_blank">
+                    <img src="instagram.png" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/fitness360" target="_blank">
+                    <img src="x.png" alt="Twitter">
+                </a>
+            </div>
+            <p>&copy; 2025 Fitness 360. All rights reserved.</p>
+        </div>
+    </section>
+
+</body>
+</html>
