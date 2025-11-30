@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness 360 - Your Ultimate Fitness Destination</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Fitness 360 x Iron Gymnasium</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="box">
+    <video autoplay muted loop id="box-video">
+        <source src="gym.mp4" type="video/mp4"> Video play Error.
+    </video>
+</section>
+
+        <div class="box-text">
+            <h2>Your Journey to Fitness Starts Here</h2>
+            <p>Join Fitness 360 and transform yourself with our expert trainers and best facilities.</p>
+            <a href="contact.html" class="box-btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Fitness 360's cutting-edge equipment, knowledgeable coaches, and encouraging community are all committed to helping you reach your fitness objectives. Everyone can benefit from fitness, and our goal is to make your journey fun, efficient, and long-lasting.</p>
+        </div>
+    </section>
+
+    <section id="membership" class="membership">
+        <div class="container">
+            <h2>Membership Plans</h2>
+            <div class="membership-cards">
+                <div class="card">
+                    <h3>Basic Plan</h3>
+                    <p>Access to gym equipment during regular hours.</p>
+                    <p>Price: 3000/month</p>
+                </div>
+                <div class="card">
+                    <h3>Premium Plan</h3>
+                    <p>Includes group classes and personal training.</p>
+                    <p>Price: 6000/month</p>
+                </div>
+                <div class="card">
+                    <h3>VIP Plan</h3>
+                    <p>Unlimited access, priority support, and custom fitness plans.</p>
+                    <p>Price: 9000/month</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Members Say</h2>
+            <div class="testimonial-cards">
+                <div class="card">
+                    <p>"Fitness 360 changed my life! The trainers are amazing and the environment is so motivating."</p>
+                    <h4>- Hafiz Abdul Rehman</h4>
+                </div>
+                <div class="card">
+                    <p>"I love the group classes! They’re fun and effective. Sir Hammad is the best."</p>
+                    <h4>- Saima</h4>
+                </div>
+                <div class="card">
+                    <p>"Great equipment and facilities. Fitness 360 has everything I need to reach my fitness goals."</p>
+                    <h4>- Saad</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-images">
+                <img src="equip.jpg" alt="Gym Equipment">
+                <img src="yoga.jpg" alt="Yoga Class">
+                <img src="training.jpg" alt="Personal Training">
+                <img src="strength.jpg" alt="Strength Training">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Fitness 360. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const images = document.querySelectorAll('.gallery-images img');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.opacity = (i === index) ? '1' : '0';
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        showImage(currentIndex);
+        setInterval(nextImage, 3000);
+    </script>
+
+</body>
+</html>
