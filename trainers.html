@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness 360 - Meet Our Trainers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Fitness 360</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="trainers">
+        <div class="container">
+            <h2>Meet Our Trainers</h2>
+            <div class="trainer-cards">
+                <div class="card" onclick="showDetails('hammad')">
+                    <img src="hammad.jpeg" alt="Hammad Arshad">
+                    <h3>Hammad Arshad</h3>
+                </div>
+                <div class="card" onclick="showDetails('ahmad')">
+                    <img src="ahmad.jpg" alt="Ahmad Javed">
+                    <h3>Ahmad Javed</h3>
+                </div>
+                <div class="card" onclick="showDetails('khizar')">
+                    <img src="khizar.jpg" alt="Khizar Cheema">
+                    <h3>Khizar Cheema</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="trainerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails()">&times;</span>
+            <div id="trainerDetails"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Fitness 360. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showDetails(trainer) {
+            let details = {
+                hammad: "<h2>Hammad Arshad</h2><p>Specialist in Strength Training with 10+ years of experience.</p>",
+                ahmad: "<h2>Ahmad Javed</h2><p>Certified Yoga Instructor focused on holistic wellness.</p>",
+                khizar: "<h2>Khizar Cheema</h2><p>Nutrition expert providing personalized diet plans.</p>"
+            };
+
+            document.getElementById('trainerDetails').innerHTML = details[trainer];
+            document.getElementById('trainerModal').style.display = 'block';
+        }
+
+        function closeDetails() {
+            document.getElementById('trainerModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            let modal = document.getElementById('trainerModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
